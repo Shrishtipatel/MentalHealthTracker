@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>
+        Mental Health Tracker
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color, 
+        Font, Alignment */ 
+        body {
+            background:linear-gradient(to bottom,#0f0c29,#302b63,#24243e);
+            font-family: Verdana;
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */ 
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input, 
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio 
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: rgb(64, 64, 179);
+            border: 1px solid #777;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1 style="color: #fff;">WellBe: Mental Health Tracker</h1>
+  
+    <!-- Create Form -->
+    <form id="form">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+        <div class="form-control">
+            <label style="color:black;"  for = "gender">Gender</label>
+            <select id="gender" name="Gender">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+                <option value="-1">Other</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your age" />
+        </div>
+  
+        <div class="form-control">
+            <label for="Course" id="label-Course">
+                Course
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="Course" id="Course">
+                <option value="Engineering ">Engineering </option>
+                <option value="Computer Science Engineering">Computer Science Engineering</option>
+                <option value="Biomedical science">Biomedical science</option>
+                <option value="Law">Law</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Human Sciences">Human Sciences</option>
+                <option value="Diploma Nursing">Diploma Nursing</option>
+                <option value="Biotechnology">Biotechnology</option>
+                <option value="Communication">Communication</option>
+
+                <option value="Business Administration">Business Administration</option>
+                <option value="Banking Studies">Banking Studies</option>
+                <option value="Accounting ">Accounting </option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Mathemathics">Mathemathics</option>
+                <option value="Nursing">Nursing</option>
+                <option value="Others">Others </option>
+            </select>
+        </div>
+         
+        <div class="form-control">
+            <label for="Year" id="label-Year">
+                Year
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="Year" id="Year">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="CGPA" id="label-CGPA">
+                CGPA
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="CGPA"
+                   placeholder="Enter your CGPA" />
+        </div>
+                
+        <div class="form-control">
+            <label style="color:black;"  for = "Marital Status">Marital Status</label>
+            <select id="Marital Status" name="Marital Status">
+                <option value="1">No</option>
+                <option value="0">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label style="color:black;"  for = "Depression">Depression</label>
+            <select id="Depression" name="Depression">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label style="color:black;"  for = "Anxiety">Anxiety</label>
+            <select id="Anxiety" name="Anxiety">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        
+        <div class="form-control">
+            <label style="color:black;"  for = "Panic Attack">Panic Attack</label>
+            <select id="Panic Attack" name="Panic Attack">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+    <h2 style="color: #fff;">
+        Result is {{result}}
+    </h2>
+</body>
+</html>
